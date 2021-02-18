@@ -1,6 +1,109 @@
 body {
-    background-color:#dedede;
+    background-color:#c09f57af;
 }
 .my-list {
     list-style-type: none;
+}
+
+.movie-item-info {
+    display: flex;
+    flex-direction: row;
+}
+.movie-item-info-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.movie-item-info-overlay {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-image: url("https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rBSpMg49sQSNn5w5VF4o0VBleNp.jpg");
+    background-size: cover;
+    background-position: top center;
+}
+.movie-item-info-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0, .8);
+}
+.movie-item-info-img, 
+.movie-item-info-description {
+    z-index: 1;
+    color: white;
+    padding: 32px;
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    flex: 1 1 auto
+}
+.movie-item-info-description {
+    flex: 10 1 auto;
+    flex-direction: column;
+}
+.movie-item-info-img img{
+    z-index: 1;
+    width: 320px;
+    height: auto;
+    transform: scale(0.95);
+    transition: all .4s ease-in-out ;
+}
+
+.movie-item-info-img img:hover{
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.item-description-row {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.item-description-title {
+    font-weight: 700;
+    font-size: 32px;
+}
+.item-description-title--yellow {
+    color: yellow;
+    font-size: 34px;
+}
+.item-description-title span {
+    font-weight: 100;
+}
+
+.item-description-subtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item-description-rate {
+    border: 1px solid white;
+    padding: 4px 8px;
+}
+.item-description-bc {
+    margin: 0 24px;
+}
+.item-description-bc span{
+    cursor: pointer;
+}
+.item-description-bc span:nth-child(2){
+    color: red;
+}
+.item-description-estimate {
+    position: relative;
+}
+.item-description-estimate::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    left: -8px;
+    top: 50%;
+    margin-top: -2px;
 }

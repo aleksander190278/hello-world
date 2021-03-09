@@ -1,0 +1,229 @@
+table  {
+    color:green;
+    border-radius:8;
+    border: 22px solid rgb(80, 255, 89);
+}
+
+[href="#ideveloper"] {
+    color: rgb(15, 175, 10) ;
+}
+[colspan="2"] {
+    color:rgb(226, 15, 15) ;
+    border: 22px solid fuchsia;
+    border-radius:8px;
+}
+.privet { 
+    color: green;
+    border: 32px solid goldenrod;
+    border-radius:8px;
+}
+#ideveloper {
+   font-weight: bold;
+
+}
+p em {
+    color: fuchsia;
+    border: 12px solid green;
+    border-radius:8px;
+}
+
+a {
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+a.btn {
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 8px 16px;
+    display: flex;
+    width: fit-content;
+    background-color: grey;
+}
+
+section {
+    min-height: 100vh;
+    padding: 16px;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+#counter,
+.counter {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#counter.blue {
+    background-color: rgb(137, 178, 255);
+}
+#counter.green {
+    background-color: rgb(157, 255, 137);
+}
+
+
+#counter.red,
+.counter__red {
+    background-color: rgb(196, 76, 76);
+}
+.counter-overlay {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.counter img {
+    width: 80px;
+    height: auto;
+    margin-right: 16px;
+   
+}
+#counter > .counter > .counter-information {
+    display: flex;
+    justify-content: center;
+    font-display: column;
+    flex-wrap: wrap;
+    width: 300px;
+    color: blue;
+}
+.counter-information-description {
+    margin-top: 8px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.counter-count {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.counter-count-number {
+    margin: 2px;
+    background-color: white;
+    padding: 2px 6px;
+    font-size: 32px;
+    font-weight: 700;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.counter-count-number.green {
+    color: rgb(128, 0, 6);
+}
+
+.whitespace {
+    margin: 0;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.hidden {
+    display: none;
+}
+#counter.green img { 
+    border-radius: 8px;
+    width: 100px;
+    height: auto;
+    margin-right: 6px;
+   
+}  
+
+#counter.green .counter-information {
+    display: flex;
+    justify-content: center;
+    font-display: column;
+    flex-wrap: wrap;
+    width: 300px;
+    color: rgb(65, 42, 165);
+}
+
+.green .counter-information-description{
+    margin-top: 8px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: lowercase;
+    color: rgb(101, 95, 160);
+}  
+
+.green .counter-count-number {
+    border: none;
+}
+
+.red {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section.red span {
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+label {
+    display: flex;
+    padding: 16px;
+    margin: 8px;
+    cursor: pointer;
+}
+.red-box {
+    position: relative;
+    width: 800px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input#input1:checked ~ label.input1 {
+    background-color: cadetblue;
+    touch-action: none;
+    pointer-events: none;
+}
+input#input1:checked ~ .red-box > span.input1 {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.input#input1:checked  {
+    
+}
+input#input2:checked ~ label.input2 {
+    background-color: rebeccapurple;
+    touch-action: none;
+    pointer-events: none;
+}
+input#input2:checked ~ .red-box > span.input2 {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+input#input3:checked ~ label.input3 {
+    background-color: cadetblue;
+    touch-action: none;
+    pointer-events: none;
+}
+input#input3:checked ~ .red-box > span.input3 {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}

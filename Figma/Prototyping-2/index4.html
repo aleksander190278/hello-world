@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Stars Wars</title>
+</head>
+<body>
+    <div class="body-overlay"></div>  
+    <div class="container starwars">
+        <div class="row">
+            <div class="col-2">
+                <a href="#">
+                    <img class="logo" src="./img/logo.svg" alt="Star wars">
+                </a>
+            </div>
+            <div class="col-10 d-flex align-items-center">
+                <nav class="starwars-nav">
+                    <ul>
+                        <li><a href="#">Билеты</a></li>
+                        <li><a href="#">О фильме</a></li>
+                        <li><a href="#">Трейлеры</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="starwars-title">
+                    <h2>Эпизод IX</h2>
+                    <h1>Скайуокер. Восход</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="starwars-description">
+                    <p>Фильм завершает невероятную историю семьи Скайуокеров, длящуюся уже более сорока лет, и обещает дать ответы на все загадки из предыдущих серий. Зрителя ожидают старые и новые герои, уникальные миры, увлекательные путешествия на край Галактики и грандиозный финал фантастической саги</p>
+                    <div class="starwars-startdate">
+                        <span>Премьера</span>
+                        <span>19 декабря 2019</span>
+                    </div>
+                    <div class="starwars-trailer">
+                        <a href="#">Смотреть трейлер</a>
+                        <span>
+                            <img src="./img/play-btn.svg" alt="play-btn">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="starwars-alider">
+                    <span class="starwars-alider-title">Предыдущие эпизоды</span>
+                        <div class="starwars-alider-container">
+                            <!-- <img src="img/e-4.png">
+                            <img src="img/e-5.png">
+                            <img src="img/e-6.png">
+                            <img src="img/e-1.png"> -->
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="starwars-alider-item active starwars-alider-item__mod">
+                                        <span>1977</span>
+                                        <div class="starwars-alider-item-title">
+                                            <h4>Эпизод IV:</h4>
+                                            <h3>Новая надежда</h3>
+                                        </div>
+                                        <div class="starwars-alider-item-rating">
+                                            <span class="r4"></span>
+                                            <span class="r1 clear-star"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="starwars-alider-item">
+                                        <span>1980</span>
+                                        <div class="starwars-alider-item-title">
+                                            <h4>Эпизод V:</h4>
+                                            <h3>Империя наносит ответный удар</h3>
+                                        </div>
+                                        <div class="starwars-alider-item-rating">
+                                            <span class="r3"></span>
+                                            <span class="r2 clear-star"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="starwars-alider-item">
+                                        <span>1980</span>
+                                        <div class="starwars-alider-item-title">
+                                            <h4>Эпизод V:</h4>
+                                            <h3>Возвращение джедая</h3>
+                                        </div>
+                                        <div class="starwars-alider-item-rating">
+                                            <span class="r3"></span>
+                                            <span class="r2 clear-star"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-3">
+                                    <div class="starwars-alider-item starwars-alider-item__mod">
+                                        <span>1999</span>
+                                    <div class="starwars-alider-item-title">
+                                        <h4>Эпизод I: </h4>
+                                        <h3>Скрытая угроза</h3>
+                                    </div>
+                                    <div class="starwars-alider-item-rating">
+                                        <span class="r2"></span>
+                                        <span class="r3 clear-star"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="starwars-alider-nav">
+                        <span id="prev" data-name="prev"><img src="./img/arrow.png" alt="Arrow"></span>
+                        <span id="next"><img src="./img/arrow.png" alt="Arrow"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let body_overlay = document.querySelector('.body-overlay');
+        let interval = window.setInterval( () => {
+            let bg = Math.random() * 10;
+            if (bg < 7) {
+                body_overlay.classList.add('bg-3');
+                body_overlay.classList.remove('bg-2');
+            }
+            if (bg < 5) {
+                body_overlay.classList.add('bg-2');
+                body_overlay.classList.remove('bg-3');
+            } 
+            if (bg < 3) {
+                body_overlay.classList.remove('bg-2');
+                body_overlay.classList.remove('bg-3');
+            } 
+        }, 5000)
+        let prev = document.getElementById('prev');
+        let next = document.getElementById('next');
+        let items = document.querySelectorAll('.starwars-alider-item');
+        next.addEventListener('click', () => {
+            let selected;
+            items.forEach((e,i) => {
+                if(e.classList.contains('active')) {
+                    selected = i;
+                }
+                e.classList.remove('active');
+            })
+            if (selected === items.length - 1) {
+                items[0].classList.add('active');
+            } else {
+                items[selected+1].classList.add('active');
+            }
+        });
+        prev.addEventListener('click', () => {
+            let selected;
+            items.forEach((e,i) => {
+                if(e.classList.contains('active')) {
+                    selected = i;
+                }
+                e.classList.remove('active');
+            })
+            if (selected === 0) {
+                items[items.length - 1].classList.add('active');
+            } else {
+                items[selected-1].classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

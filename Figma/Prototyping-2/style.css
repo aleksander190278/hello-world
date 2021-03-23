@@ -1,0 +1,297 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+    color: white;
+    z-index: -1;
+}
+
+.body-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url('./img/main-bg.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.body-overlay.bg-2,
+.body-overlay.bg-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url('./img/main-bg-2.png');
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: .6;
+}
+.bg-2:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./img/kylo.png');
+    background-position: right 200px center;
+    background-size: 25%;
+    background-repeat: no-repeat;
+}
+.body-overlay.bg-3 {
+    opacity: .8;
+}
+.bg-3:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./img/solder.png');
+    background-position: right 200px bottom;
+    background-size: 25%;
+    background-repeat: no-repeat;
+}
+.starwars .logo {
+    margin-top: 20px;
+}
+.starwars-nav > ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    margin-top: 20px;
+}
+.starwars-nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 4px 8px;
+    margin: 0 8px;
+    transition: all 0.5s;
+}
+
+.starwars-nav > ul > li > a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.starwars-title {
+    width: 700px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-family: 'Roboto', serif;
+}
+.starwars-title h2 {
+    font-size: 40px;
+}
+.starwars-title h1 {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.starwars-description {
+    width: 600px;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 22px;
+    margin-bottom: 40px;
+}
+.starwars-startdate {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.starwars-startdate span:first-child {
+    color: tomato;
+    margin-bottom: 4px;
+}
+
+.starwars-startdate span:last-child {
+    font-weight: 700;
+}
+
+.starwars-trailer {
+    position: relative;
+    width: 240px;
+    height: 40px;
+}
+
+.starwars-trailer a {
+    background-color: tomato;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    padding-right: 40px;
+    box-shadow: 0 0 0 black inset;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.starwars-trailer span {
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background-color: rgba(255, 255, 255, .6);
+    top: -9px;
+    right: -9px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    touch-action: none;
+    pointer-events: none;
+}
+
+.starwars-trailer span img {
+    position: relative;
+    width: 15px;
+    height: auto;
+    margin-left: 3px;
+}
+
+.starwars-trailer span::before {
+    width: 48px;
+    height: 48px;
+    content:'';
+    position: absolute;
+    background-color: #fff;
+   border-radius: 10rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.starwars-trailer a:hover {
+    box-shadow: 0 0 5px black inset;
+}
+
+.starwars-trailer a:hover + span {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.starwars-trailer a:hover + span::before {
+    background-color: black;
+}
+
+.starwars-alider-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+}
+
+.starwars-alider-nav {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 80px;
+}
+
+.starwars-alider-nav span { 
+    cursor: pointer;
+    margin: 0 16px;
+    display: flex;
+}
+
+.starwars-alider-nav span:last-child { 
+    transform: rotateY(180deg);
+}
+
+.starwars-alider-item {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background-image: url('https://via.placeholder.com/350.png/000');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 250px;
+    min-height: 210px;
+    padding: 40px 24px;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+.starwars-alider-item.active {
+    border: 1px solid green;
+}
+
+.starwars-alider-item.active::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,.3);
+}
+.starwars-alider-item-title h4 {
+    font-size: 18px;
+}
+
+.starwars-alider-item-title h3 {
+    font-size: 20px;
+}
+
+.starwars-alider-item-rating {
+    margin-top: auto;
+    display: flex;
+}
+
+.starwars-alider-item-rating > span {
+    width: 80px;
+    height: 20px;
+    display: flex;
+    background-image: url('./img/star.png');
+    background-size: 20px;
+    background-repeat-y: no-repeat;
+}
+
+
+.starwars-alider-item-rating > span.r1 {
+    width: 20px;
+}
+.starwars-alider-item-rating > span.r2 {
+    width: 40px;
+}
+.starwars-alider-item-rating > span.r3 {
+    width: 60px;
+}
+.starwars-alider-item-rating > span.r4 {
+    width: 80px;
+}
+.starwars-alider-item-rating > span.r5 {
+    width: 100px;
+}
+.starwars-alider-item-rating > span.clear-star {
+    background-image: url('./img/Vector.png');
+}
+
+.starwars-alider-container > .row > .col-3:nth-child(2) > .starwars-alider-item {
+    background-image: url('https://via.placeholder.com/350.png/022e3b');
+}
+
+.starwars-alider-container > .row > .col-3:nth-child(3) > .starwars-alider-item {
+    background-image: url('https://via.placeholder.com/350.png/7a2224');
+}
+
+.starwars-alider-container > .row > .col-3:nth-child(4) > .starwars-alider-item {
+    background-image: url('https://via.placeholder.com/350.png/a48b7f');
+}

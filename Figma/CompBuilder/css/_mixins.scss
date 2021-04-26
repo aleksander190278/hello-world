@@ -1,0 +1,7 @@
+@mixin margin($margin: 8px) {
+    margin: $margin auto;
+}
+
+@mixin borderRadius($radius: 8px) {
+    border-radius: $radius;
+}

@@ -1,18 +1,46 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #0D0D2B;
     color: white;
+    background: linear-gradient(180deg, #0D0D2B 35%, #644cb2 65%, #0D0D2B 100%);
+    font-size: 16px;
+    line-height: 28px;
+    overflow-x: hidden;
 }
-
+.bg-ligh {
+    background: linear-gradient(180deg, #F8F9FB 0%, #FAFBFF 100%);
+}
+section {
+    min-height: 60vh;
+}
+.height-auto {
+    min-height: initial;
+    height: auto;
+}
+.hidden {
+    display: none;
+}
+.polygon {
+    display: block;
+    width: 1200px;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 34.75%, rgba(255, 255, 255, 0.01) 100%);
+    transform: rotate(150deg);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    pointer-events: none;
+    touch-action: none;
+}
 .crappo-header {
     margin-top: 20px;
     margin-bottom: 80px;
 }
 
-.crappo-header-logo {
+a.crappo-header-logo {
     display: flex;
-    align-items: center;
+    align-items:center ;
+    text-decoration: none;
 }
 .crappo-header-logo img {
     margin-right: 16px;
@@ -21,10 +49,11 @@ body {
     margin: 0;
     padding: 0;
     line-height: 0;
+    color: white;
 }
 
 .crappo-header-menu {
-    display: flex;
+    display:flex ;
     justify-content: flex-end;
     width: 100%;
     height: 100%;
@@ -33,7 +62,7 @@ body {
 .crappo-header-menu ul {
     display: flex;
     list-style-type: none;
-    align-items: center;
+    align-items:center;
     justify-content: flex-end;
     padding: 0;
     margin: 0;
@@ -61,11 +90,8 @@ body {
     position: relative;
     border-radius: 32px;
 }
-.crappo-header-sign-btn__active {
-    background-color: #3671E9;
-    padding: 14px 32px;
-    transition: all 0.3s;
-}
+
+
 .crappo-header-sign-btn__active:hover {
     background-color: #fff;
     color: #0D0D2B;
@@ -77,4 +103,571 @@ body {
     display: flex;
     opacity: 0.3;
     margin: 0 16px;
+}
+
+.crappo-main-body {
+    width: 590px;
+    padding-top: 100px;
+}
+
+.crappo-main-discount {
+    padding: 16px 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10rem;
+    width: fit-content;
+    margin-bottom: 24px;
+}
+
+.crappo-main-discount > span:first-child {
+    background-color: #fff;
+    border-radius: 10rem;
+    padding: 10px 24px;
+    color: #0D0D2B;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-right: 16px;
+}
+.crappo-main-discount > span:last-child {
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    margin-right: 16px;
+}
+
+.crappo-main-title {
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 76px;
+    margin-bottom: 24px;
+}
+
+.crappo-main-description {
+    max-width: 435px;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 24px;
+}
+
+.crappo-main-btn-try-free {
+    background-color: #3671E9;
+    border-radius: 10rem;
+    border: none;
+    padding: 16px;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    transition: all 0.5s;
+    margin-bottom: 60px;
+}
+.crappo-main-btn-try-free:hover {
+    cursor: pointer;
+    background-color: #644cb2;
+}
+
+.crappo-main-btn-try-free img {
+    margin-left: 24px;
+}
+
+.crappo-main-body-wrapper {
+    width: 100%;
+    background-image: url('../img/main-bg.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+.crappo-second-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.crappo-second-header-item {
+    display: flex;
+    align-items: center;
+}
+.crappo-second-header-item-img {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 24px;
+}
+.crappo-second-header-item-img > img{
+    width: 40px;
+    height: auto;
+}
+
+.crappo-second-header-item-description > h4 {
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 1px;
+    line-height: 36px;
+    margin: 0 0 8px 0;
+}
+
+.crappo-second-header-item-description > p {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0;
+}
+
+.crappo-second-body-wrapper {
+    width: 100%;
+    background-image: url('../img/main-bg.png'); 
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+    display: flex;
+    justify-content: flex-end;
+}
+.crappo-second-body {
+    width: 590px;
+    padding-top: 100px;
+}
+.crappo-second-title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 24px;
+}
+
+.crappo-second-description {
+    max-width: 400px;
+    margin-bottom: 24px;
+}
+
+.btn {
+    border-radius: 10rem;
+    border: none;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+
+.btn-blue {
+    background-color: #3671E9;
+    color: white;
+}
+
+.btn-blue:hover {
+    background-color: #644cb2;
+    color: white;
+}
+
+.btn-main {
+    background-color: #644cb2;
+    color: white;
+}
+
+.btn-main:hover {
+    background-color: #3671E9;
+    color: white;
+}
+
+
+.crappo-four-header {
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+a.crappo-four-header-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;  
+}
+.crappo-four-header-logo img {
+    margin-right: 16px;
+}    
+.crappo-four-header-logo h4 {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    color: white;
+}   
+.crappo-four-header-menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.crappo-four-header-menu ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+.crappo-four-header-menu ul>li {
+    margin: 0 16px;
+    cursor: pointer;
+    border-bottom: white dashed 1px;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+
+
+
+/* */
+.crappo-third {
+    text-align: center;
+    position: relative;
+}
+
+.crappo-third-title {
+    margin-bottom: 260px;
+}
+
+.crappo-third-form {
+    position: absolute;
+    min-width: 300px;
+    max-width: 800px;
+    background-color: #fff;
+    left: 50%;
+    border-radius: 16px;
+    box-shadow: 0 0 10px 1px #3671E9;
+    transform: translate(-50%, -50%);
+    padding: 24px;
+}
+
+.crappo-third-form select,
+.crappo-third-form input {
+    border:none;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 12px 16px;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.crappo-third-form-top {
+    margin-bottom: 60px;
+}
+.crappo-third-form-bottom {
+    text-align: left;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+.crappo-third-form-bottom h4 {
+    margin-top: auto;
+    margin-bottom: 24px;
+    color: #3671E9;
+    font-size: 18px;
+    
+}
+
+.crappo-third-form-bottom h2 {
+    font-weight: 700;
+}
+.crappo-third-form-bottom h2>span {
+    color: #3671E9;
+}
+
+.crappo-third-form-bottom p {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    color: #828282;
+}
+
+.crappo-five h2 {
+    width: 741px;
+    height: 120px;
+    margin: 200px auto 0;
+    color: black;
+    text-align: center;
+    
+} 
+ 
+.crappo-five-form {
+    padding: 20px; ;
+}
+
+.crappo-five-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 32px;
+    color: #464646;
+    border-radius: 16px;
+    margin: 40px 0;
+    border: 1px solid #464646;
+    transition: all 0.5s ease-in-out;
+    height: 433px
+}
+
+.crappo-five-item-logo,
+.crappo-five-item p,
+.crappo-five-item .btn,
+.crappo-five-item h3 {
+    margin-bottom: 20px;
+}
+
+.crappo-five-item h3 {
+    font-weight: bold;
+}
+.crappo-five-item h3 span {
+    font-weight: 100;
+}
+
+.crappo-five-item__active {
+    border: 1px solid #2B076E;
+    background-color: #2B076E;
+    color: #F8F9FB;
+}
+
+.crappo-five-item:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 1px #3671E9 inset;
+}
+
+.crappo-five-item__active:hover {
+    cursor: initial;
+    box-shadow: initial;
+}
+.btn__white {
+    background-color: #fff;
+    border: 1px solid #464646;
+}
+.btn__icononly img{
+    margin-left: 0;
+}
+
+
+   
+
+@media (max-width: 480px) {
+    .crappo-second-header {
+        display: flex;
+        flex-direction: column;
+    }
+    .crappo-second-header-item {
+       max-width: 90vw;
+       margin: 24px 0;
+       
+    }
+    .crappo-main-discount span {
+        font-size: 14px !important;
+       
+
+    }
+    .crappo-main-title {
+        max-width: 300px;
+        
+    }
+    .crappo-main-body {
+        max-width: 100%;
+       
+    }
+        
+    .crappo-header-logo {
+        justify-content: center;
+       
+    }
+    .crappo-header-menu {
+        justify-content: center;
+        margin-top: 516px;
+    }
+    .crappo-header-sign {
+        display: none;
+    }
+}
+
+.crappo-six h2 {
+    text-align: center;
+    color: white;
+    margin: 60px auto;
+    width: 740px;
+}
+
+.crappo-six-item-wrapper {
+    width: 100%;
+    background-image: url('../img/six-chart.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.crappo-six-item-wrapper__item-2 {
+    background-image: url('../img/six-statistic.png');
+    background-position: top left;
+}
+
+.crappo-six-item-wrapper__item-3 {
+    background-image: url('../img/six-table.png');
+}
+
+.crappo-six-item {
+    width: 400px;
+    height: 420px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.crappo-six-item-title,
+.crappo-six-item-description {
+    margin-bottom: 24px;
+}
+
+.crappo-six-item .btn {
+    max-width: 180px;
+}
+
+.crappo-contact-form {
+    width: 100%;
+    min-height: 180px;
+    background-color: #3671E9;
+    border-radius: 16px;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+
+}
+
+.crappo-contact-form span {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+.crappo-contact-form-email {
+    border: none;
+    background-color: transparent;
+    color: white;
+    margin-left: auto;
+    margin-right: 16px;
+    width: 300px;
+    border-bottom: 1px solid white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+input:focus {
+    outline: none;
+}
+
+.crappo-contact-form-email::-webkit-input-placeholder {
+    color: white;
+}
+
+.crappo-contact-form-email::selection {
+    background:#100f2f;
+    color:white;
+}
+
+.btn-subscribe {
+    padding: 8px 24px;
+    font-weight: 18;
+    font-weight: 500;
+}
+.crappo-footer {
+    padding-bottom: 40px;
+}
+
+
+.crappo-footer-logo:hover,
+.crappo-footer-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transform: translate(0, -8px);
+}
+
+.crappo-footer-logo > img {
+    margin-right: 16px;
+}
+
+.crappo-footer-logo > h4 {
+    margin: 0;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.crappo-footer-nav-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.crappo-footer-nav-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+}
+
+.crappo-footer-nav-item ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.crappo-footer-nav-item ul > li {
+    margin: 8px 0;
+}
+
+.crappo-footer-nav-item ul > li > a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+.crappo-footer-nav-item ul > li > a:hover {
+    color: #3671e9;
+}
+
+.crappo-footer-payment-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.crappo-footer-payment-info h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.crappo-footer-payment-info span {
+    max-width: 30%;
+    width: 100px;
+    height: 65px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.crappo-footer-copy {
+    margin-right: auto;
+}
+
+.crappo-footer-social a {
+    margin: 0 8px;
+}
+
+.crappo-footer-social a > i{
+    color: white;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.crappo-footer-social a:hover > i{
+    color: #3671e9;
 }

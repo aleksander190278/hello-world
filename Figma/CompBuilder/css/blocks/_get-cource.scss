@@ -1,0 +1,32 @@
+.get-cource {
+    min-height: 10vh;
+    background-color: #121212;
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 10vh;
+        & > .btn {
+            margin-right: 32px;
+        }
+    }
+    &-students-count {
+        display: flex;
+        flex-direction: column;
+        span {
+            display: flex;
+            line-height: 0;
+            flex-direction: row;
+            width: 230px;
+            justify-content: space-between;
+            &:first-child {
+                margin-bottom: 24px;
+            }
+            p {
+                opacity: 0.4;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}

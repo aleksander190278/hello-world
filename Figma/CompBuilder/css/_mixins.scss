@@ -5,3 +5,7 @@
 @mixin borderRadius($radius: 8px) {
     border-radius: $radius;
 }
+
+@mixin background-gradient($from:$gradient-from , $to:$gradient-to) {
+    background: linear-gradient(110deg, $from,  $to);
+}

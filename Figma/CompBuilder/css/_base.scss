@@ -1,12 +1,33 @@
 * {
     box-sizing: border-box;
+    transition: all 0.3s;
 }
 body {
     margin: 0;
     padding: 0;
     background-color: $body-color;
+    color: $text-color;
 }
 
+header,
 section {
     min-height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.btn {
+    border: none;
+    padding: 8px 32px;
+    border-radius: 32px;
+}
+
+.btn-primary {
+    @include background-gradient();
+    transition: all 0.3s;
+    box-shadow: none;
+
+    &:hover {
+        box-shadow: 0 0 2px 1px $shadow-color;
+    }
 }

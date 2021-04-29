@@ -1,0 +1,85 @@
+.main {
+    background-image: url('/img/main-screen__bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    min-height: 90vh;
+    &-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        display: flex;
+        z-index: 1;
+    }
+    &-nav {
+        z-index: 2;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 40px 60px;
+        align-items: center;
+        position: relative;
+        margin-bottom: 140px;
+        & > ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        &-item {
+            margin: 0 16px;
+        }
+        &-link {
+            color: $text-color;
+            text-decoration: none;
+            &:hover {
+                text-decoration: none;
+                color: $text-color-hover;
+            }
+        }
+    }
+    &-content {
+        position: relative;
+        z-index: 2;
+    }
+    &-title {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 140%;
+        margin-bottom: 40px;
+    }
+    &-content-clock {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-content-timer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 102px;
+        height: 102px;
+        background-color: #121212;
+        h3, p {
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            line-height: 140%;
+            margin: 0;
+        }
+        h3 {
+            font-weight: bold;
+            font-size: 36px;
+        }
+        p {
+            font-weight: normal;
+            font-size: 16px;
+            opacity: 0.4;
+        }
+    }
+}

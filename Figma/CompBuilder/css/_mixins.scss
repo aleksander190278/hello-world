@@ -6,6 +6,24 @@
     border-radius: $radius;
 }
 
-@mixin background-gradient($from:$gradient-from , $to:$gradient-to) {
-    background: linear-gradient(110deg, $from,  $to);
+@mixin background-gradient($from:$gradient-from , $to:$gradient-to, $deg: 110deg) {
+    background: linear-gradient($deg, $from,  $to);
+    transition: all 0.3s;
+    &:hover {
+        background: linear-gradient($deg, darken($from, 10),  $to);
+    }
+}
+
+@mixin headerH2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 140%;
+    margin-bottom: 64px;
+}
+
+@mixin headerH2Flex {
+    @include headerH2();
+    display: flex;
+    align-items: center;
 }

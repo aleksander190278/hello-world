@@ -1,0 +1,39 @@
+.what-we-doing {
+    min-height: 10vh;
+    margin: 100px 0;
+    &-wrapper {
+        position: relative;
+        border: 30px solid;
+        border-image: linear-gradient(110deg, $gradient-from , $gradient-to);
+        border-image-slice: 1;
+        width: 500h;
+        height: 500px;
+        display: flex;
+        background-color: rgba($text-color, 0.1);
+        box-shadow: 0 0 10px 3px $gradient-to;
+        img {
+            position: absolute;
+            top: 60px;
+            left: 40px;
+        }
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        justify-content: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        h2 {
+            font-size: 48px;
+            line-height: 140%;
+            margin-bottom: 24px;
+        }
+        p {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 160%;
+        }
+    }
+}

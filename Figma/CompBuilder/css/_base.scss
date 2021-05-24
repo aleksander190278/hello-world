@@ -7,6 +7,7 @@ body {
     padding: 0;
     background-color: $body-color;
     color: $text-color;
+    overflow-x: hidden;
 }
 
 header,
@@ -20,14 +21,25 @@ section {
     border: none;
     padding: 8px 32px;
     border-radius: 32px;
+    transition: all 0.3s;
+    box-shadow: none;
+    color: $text-color;
 }
 
 .btn-primary {
     @include background-gradient();
-    transition: all 0.3s;
-    box-shadow: none;
 
     &:hover {
         box-shadow: 0 0 2px 1px $shadow-color;
+    }
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid $text-color;
+
+    &:hover {
+        box-shadow: 0 0 2px 1px $shadow-color;
+        background: rgba($color: $text-color, $alpha: .3);
     }
 }
